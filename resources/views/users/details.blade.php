@@ -4,9 +4,9 @@
 
 @section('content')
 
-  <h1>Detalhes do usuário {{$user -> name}}</h1>
+  <h1 class="pt-3">Detalhes do usuário {{$user -> name}}</h1>
 
-  <ul>
+  <ul class="list">
     <li>
       <p><strong>Nome: </strong>{{$user -> name}}</p>
     </li>
@@ -24,7 +24,7 @@
   <form action=" {{ route('users.delete', $user -> id) }}" method="POST">
     @method('DELETE')
     @csrf
-    <button type="submit">Deletar</button>
+    <button class="btn btn-danger btn-sm" type="submit">Deletar</button>
+    <a class="btn btn-secondary btn-sm" href="{{ route('users.index') }}">Retornar</a>
   </form>
-  <p><a href="{{ route('users.index') }}">Retornar</a></p>
 @endsection

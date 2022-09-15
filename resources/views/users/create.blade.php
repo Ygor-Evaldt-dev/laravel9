@@ -9,20 +9,20 @@
 </style>
 
 @section('content')
-  <h1>
-    Novo Usuário
+  <h1 class="mt-3">
+    Novo usuário
   </h1>
 
-  <form action="{{route('users.store')}}" method="POST">
+  <form class="form mt-3 col-md-6" action="{{route('users.store')}}" method="POST">
     @csrf
     @include('_partials/form')
-    <button type="submit">
+    <button class="btn btn-success btn-sm" type="submit">
       Cadastrar
     </button>
 
   @include('includes/validations-form')
 
-  <p><a href="{{ route('users.index') }}">Cancelar</a></p>
+  <a class="btn btn-secondary btn-sm" href="{{ route('users.index') }}">Cancelar</a>
   
 
 @endsection 

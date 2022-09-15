@@ -9,21 +9,20 @@
 </style>
 
 @section('content')
-  <h1>
-    Editar Usuário {{ $user -> name }}
+  <h1 class="mt-3">
+    Editar usuário: <span class="text-secondary">{{ $user -> name }}</span>
   </h1>
 
-  <form action="{{ route('users.update', $user -> id) }}" method="POST">
+  <form class="form mt-3 col-md-6" action="{{ route('users.update', $user -> id) }}" method="POST">
     @method('PUT')
     @include('_partials/form')
-    <button type="submit">
+    <button class="btn btn-success btn-sm" type="submit">
       Salvar
     </button>
-    
+    <a class="btn btn-secondary btn-sm" href="{{ route('users.index') }}">Cancelar</a>
   </form>
 
   @include('includes/validations-form')
 
-  <p><a href="{{ route('users.index') }}">Cancelar</a></p>
 
 @endsection 
