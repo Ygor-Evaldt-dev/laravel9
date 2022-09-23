@@ -6,18 +6,18 @@
 
   <h1 class="pt-3">Detalhes do usuário {{$user -> name}}</h1>
 
-  <ul class="list">
-    <li>
-      <p><strong>Nome: </strong>{{$user -> name}}</p>
+  <ul class="list-group pt-4 pb-4 col-md-6">
+    <li class="list-group-item">
+      <strong>Nome: </strong>{{$user -> name}}
     </li>
-    <li>
-      <p><strong>E-mail: </strong>{{$user -> email}}</p>
+    <li class="list-group-item">
+     <strong>E-mail: </strong>{{$user -> email}}
     </li>
-    <li>
-      <p><strong>Data de cadastro: </strong>{{$user -> created_at}}</p>
+    <li class="list-group-item">
+     <strong>Data de cadastro: </strong>{{$user -> created_at}}
     </li>
-    <li>
-      <p><strong>Ultima atualização: </strong>{{$user -> updated_at}}</p>
+    <li class="list-group-item">
+     <strong>Ultima atualização: </strong>{{$user -> updated_at}}
     </li>
   </ul>
   

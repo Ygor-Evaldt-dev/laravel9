@@ -66,18 +66,18 @@ class UserController extends Controller
         */
     }
 
-    public function edit($id)
+    public function edit($userId)
     {
-        if (!$user = $this->model->find($id)) {
+        if (!$user = $this->model->find($userId)) {
             return redirect()->route('users.index');
         }
 
         return view('users.edit', compact('user'));
     }
 
-    public function update(StoreUpdateUserFormRequest $request, $id)
+    public function update(StoreUpdateUserFormRequest $request, $userId)
     {
-        if (!$user = $this->model->find($id)) {
+        if (!$user = $this->model->find($userId)) {
             return redirect()->route('users.index');
         }
 
@@ -90,13 +90,14 @@ class UserController extends Controller
         return redirect()->route('users.index');
     }
 
-    public function delete($id)
+    public function delete($userId)
     {
-        if (!$user = $this->model->find($id)) {
+
+        if (!$user = $this->model->find($userId)) {
             return redirect()->route('users.index');
         }
 
-        $user->delete($id);
+        $user->delete($userId);
         return redirect()->route('users.index');
     }
 }

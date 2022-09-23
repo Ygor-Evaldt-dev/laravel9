@@ -39,7 +39,7 @@
   <header>
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{{ route('users.index') }}">Home</a>
+        <a class="navbar-brand" href="{{ route('users.index') }}">Início</a>
         <form class="d-flex input-group w-auto" action="{{ route('users.index') }}" method="GET">
           <input
             type="search"
@@ -50,7 +50,7 @@
             name="search"
           />
           <button class="input-group-text border-0" id="search-addon">
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search" title="Pesquisar"></i>
           </button>
         </form>
       </div>
@@ -59,5 +59,8 @@
   <main class="app container-fluid">
     @yield('content')
   </main>
+  <footer class="container-fluid bg-secondary bg-gradient mt-5">
+    <p class="text-white text-center py-2 mb-0">Copyright<i class="far fa-copyright"></i><a class="text-white" title="Ygor Evaldt GitHub" href="https://github.com/Ygor-Evaldt-dev" target="_blanck">YgorEvaldt</a></p>
+  </footer>
 </body>
 </html>

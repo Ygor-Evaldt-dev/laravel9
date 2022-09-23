@@ -15,7 +15,7 @@
 
   <form class="form mt-3 col-md-6" action="{{ route('users.update', $user -> id) }}" method="POST">
     @method('PUT')
-    @include('_partials/form')
+    @include('users/_partials/form')
     <button class="btn btn-success btn-sm" type="submit">
       Salvar
     </button>

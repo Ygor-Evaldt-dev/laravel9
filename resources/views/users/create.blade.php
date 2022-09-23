@@ -15,7 +15,7 @@
 
   <form class="form mt-3 col-md-6" action="{{route('users.store')}}" method="POST">
     @csrf
-    @include('_partials/form')
+    @include('users/_partials/form')
     <button class="btn btn-success btn-sm" type="submit">
       Cadastrar
     </button>
@@ -23,6 +23,6 @@
   @include('includes/validations-form')
 
   <a class="btn btn-secondary btn-sm" href="{{ route('users.index') }}">Cancelar</a>
-  
+   
 
 @endsection 
