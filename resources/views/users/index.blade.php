@@ -46,7 +46,7 @@
         </form>
       </td>
       <td class="text-center"><a class="btn btn-info btn-sm" href="{{ route('users.details', $user -> id) }}">Detalhes</a></td>
-      <td class="text-center"><a class="btn btn-primary btn-sm" href="{{ route('comments.index', $user -> id) }}">Comentarios</a></td>
+      <td class="text-center"><a class="btn btn-primary btn-sm" href="{{ route('comments.index', $user -> id) }}">Comentarios({{$user->comments->count()}})</a></td>
     </tr>
     @endforeach
   </tbody>
